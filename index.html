@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://vk.com/js/api/openapi.js" type="text/javascript"></script>
+	<script src="game.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div id="vk_subscribe"></div>
+
+<style>
+    body{
+        min-height: 4000px;
+    }
+</style>
+
+<script>
+    VK.Widgets.Subscribe('vk_subscribe', {soft: 1}, -1);
+    $(function(){
+        $('#vk_subscribe').cgame({
+            'subscribeTo': '6667526',
+            'debug': true,
+            'startAfterClick': 0,
+            'strategyTimeout': false,
+            'strategy': 'jumper'
+        });
+    });
+</script>
+
+</body>
+</html>
+
